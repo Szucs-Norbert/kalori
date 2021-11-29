@@ -17,6 +17,7 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("Felnőtt férfi/nő napi kalóriaszügségletének kiszámítása!");
         Kalori kalori = new Kalori();
         kalori.getDatas();
         System.out.println("Férfi kalória:");
