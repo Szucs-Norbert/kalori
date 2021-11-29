@@ -16,7 +16,9 @@
  */
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
+
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -52,7 +54,7 @@ public class kaloriaTest {
         kalori.setDatas(testtomeg, magassag, eletkor);
         
         double actualKaloriaFerfi= kalori.calcKaloriaFerfi();
-        double expectedKaloriaFerfi= 1825.597;
+        double expectedKaloriaFerfi= 1697.43;
 
         assertEquals(expectedKaloriaFerfi, actualKaloriaFerfi, 0.01);   
     }
@@ -65,7 +67,7 @@ public class kaloriaTest {
         kalori.setDatas(testtomeg, magassag, eletkor);
         
         double actualKaloriaNo= kalori.calcKaloriaNo();
-        double expectedKaloriaNo= 1825.597;
+        double expectedKaloriaNo= 1593.44;
 
         assertEquals(expectedKaloriaNo, actualKaloriaNo, 0.01); 
     }
@@ -78,7 +80,7 @@ public class kaloriaTest {
         kalori.setDatas(testtomeg, magassag, eletkor);
         
         double actualKaloriaNo= kalori.calcKaloriaNo();
-        double expectedKaloriaNo= 1825.597;
+        double expectedKaloriaNo= 1316.233;
 
         assertEquals(expectedKaloriaNo, actualKaloriaNo, 0.01); 
     }
@@ -87,15 +89,24 @@ public class kaloriaTest {
     @DisplayName("A testomeg 0 teszt Ferfi")
     @Disabled()
     void calacKaloriaFerfiTesttomegZero(){
-        assertEquals(0, this.kalori.calcKaloriaFerfi(80, 180, 35));
+        assertEquals(0, this.kalori.calcKaloriaFerfi());
     }
 
     @Test
     @DisplayName("A testomeg 0 teszt No")
     @Disabled()
     void calacKaloriaNoTesttomegZero(){
-        assertEquals(0, this.kalori.calcKaloriaNo(80, 180, 35));
+        assertEquals(0, this.kalori.calcKaloriaNo());
     }
 
+    /*
+    @Test
+    void testExceptedException() {
+ 
+        assertThrows(Exception.class, ()->{
+            num(0);    
+        });
+    }
+    */
     
 }
