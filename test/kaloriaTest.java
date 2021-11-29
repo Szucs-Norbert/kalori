@@ -36,10 +36,12 @@ public class kaloriaTest {
         double testtomeg= 80;
         double magassag= 180;
         double eletkor= 35;
+        kalori.setDatas(testtomeg, magassag, eletkor);
+        
+        double actualKaloriaFerfi= kalori.calcKaloriaFerfi();
         double expectedKaloriaFerfi= 1825.597;
-        double actualKaloriaFerfi= this.kalori.kaloriaFerfi(testtomeg, magassag, eletkor);
 
-        assertEquals(expectedKaloriaFerfi, actualKaloriaFerfi);   
+        assertEquals(expectedKaloriaFerfi, actualKaloriaFerfi, 0.01);   
     }
 
     @Test
@@ -47,10 +49,12 @@ public class kaloriaTest {
         double testtomeg= 72;
         double magassag= 165;
         double eletkor= 26;
-        double expectedKaloriaFerfi= 1697.4390000000003;
-        double actualKaloriaFerfi= this.kalori.kaloriaFerfi(testtomeg, magassag, eletkor);
+        kalori.setDatas(testtomeg, magassag, eletkor);
+        
+        double actualKaloriaFerfi= kalori.calcKaloriaFerfi();
+        double expectedKaloriaFerfi= 1825.597;
 
-        assertEquals(expectedKaloriaFerfi, actualKaloriaFerfi);   
+        assertEquals(expectedKaloriaFerfi, actualKaloriaFerfi, 0.01);   
     }
 
     @Test
@@ -58,10 +62,12 @@ public class kaloriaTest {
         double testtomeg= 80;
         double magassag= 180;
         double eletkor= 35;
-        double expectedKaloriaNo= 1593.4430000000002;
-        double actualKaloriaNo= this.kalori.kaloriaNo(testtomeg, magassag, eletkor);
+        kalori.setDatas(testtomeg, magassag, eletkor);
+        
+        double actualKaloriaNo= kalori.calcKaloriaNo();
+        double expectedKaloriaNo= 1825.597;
 
-        assertEquals(expectedKaloriaNo, actualKaloriaNo);
+        assertEquals(expectedKaloriaNo, actualKaloriaNo, 0.01); 
     }
 
     @Test
@@ -69,24 +75,26 @@ public class kaloriaTest {
         double testtomeg= 60;
         double magassag= 160;
         double eletkor= 42;
-        double expectedKaloriaNo= 1316.233;
-        double actualKaloriaNo= this.kalori.kaloriaNo(testtomeg, magassag, eletkor);
+        kalori.setDatas(testtomeg, magassag, eletkor);
+        
+        double actualKaloriaNo= kalori.calcKaloriaNo();
+        double expectedKaloriaNo= 1825.597;
 
-        assertEquals(expectedKaloriaNo, actualKaloriaNo);
+        assertEquals(expectedKaloriaNo, actualKaloriaNo, 0.01); 
     }
 
     @Test
     @DisplayName("A testomeg 0 teszt Ferfi")
     @Disabled()
     void calacKaloriaFerfiTesttomegZero(){
-        assertEquals(0, this.kalori.kaloriaFerfi(80, 180, 35));
+        assertEquals(0, this.kalori.calcKaloriaFerfi(80, 180, 35));
     }
 
     @Test
     @DisplayName("A testomeg 0 teszt No")
     @Disabled()
     void calacKaloriaNoTesttomegZero(){
-        assertEquals(0, this.kalori.kaloriaNo(80, 180, 35));
+        assertEquals(0, this.kalori.calcKaloriaNo(80, 180, 35));
     }
 
     

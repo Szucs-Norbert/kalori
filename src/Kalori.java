@@ -16,11 +16,35 @@
  */
 
 public class Kalori{
-    public double kaloriaFerfi(double testtomeg, double magassag, double eletkor){
-        return 13.397*testtomeg+4.799*magassag-5.667*eletkor+88.362;
+
+    
+    double testtomeg;
+    double magassag;
+    double eletkor;
+
+    public void setDatas(double testtomeg, double magassag, double eletkor){
+        this.testtomeg=testtomeg;
+        this.magassag=magassag;
+        this.eletkor=eletkor;
     }
 
-    public double kaloriaNo(double testtomeg, double magassag, double eletkor){
-        return 9.247* testtomeg+3.098*magassag - 4.330*eletkor+447.593;
+    public void getDatas() {
+        testtomeg = Input.input("Testtömeg: ");
+        magassag = Input.input("Magasság: ");
+        eletkor = Input.input("Életkor: ");
+        
+    }
+    
+
+    public double calcKaloriaFerfi(){      
+            
+        double kaloriaFerfi= 13.397*this.testtomeg+4.799*this.magassag-5.667*this.eletkor+88.362; 
+        return kaloriaFerfi;
+    }
+
+    public double calcKaloriaNo(){
+        
+        double kaloriaNo= 9.247* this.testtomeg+3.098*this.magassag - 4.330*this.eletkor+447.593;
+        return kaloriaNo;
     }
 }

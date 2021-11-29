@@ -17,6 +17,14 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Kalori kalori = new Kalori();
+        kalori.getDatas();
+        System.out.println("Férfi kalória:");
+        System.out.println(kalori.calcKaloriaFerfi());
+        System.out.println("Nő kalória:");
+        System.out.println(kalori.calcKaloriaNo());
+
+        System.out.println("Hello, World!");  
+    
     }
 }
