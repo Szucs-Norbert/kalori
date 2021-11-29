@@ -21,10 +21,11 @@ public class App {
         kalori.getDatas();
         System.out.println("Férfi kalória:");
         System.out.println(kalori.calcKaloriaFerfi());
+        System.out.println();
         System.out.println("Nő kalória:");
         System.out.println(kalori.calcKaloriaNo());
 
-        System.out.println("Hello, World!");  
+ 
     
     }
 }
